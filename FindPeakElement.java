@@ -18,9 +18,7 @@ class Solution {
            res= nums[mid] > nums[mid+1] ? mid: -1;
         } else if(mid== nums.length-1) {
            res= nums[mid] > nums[mid-1] ? mid: -1;
-        } else if(mid > 0 && nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]) {
-            res = mid;
-        } else if(mid < nums.length-1 && nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]) {
+        } else if(nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]) {
             res = mid;
         }
         
@@ -34,6 +32,5 @@ class Solution {
         } else {
             return res;
         }
-        
     }
 }
